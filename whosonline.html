@@ -4,7 +4,7 @@
 /*   - Designed to be used as a stand-alone page (See readme for use!)     */
 /*   - Distributed under the GPL terms - see the readme for info           */
 /*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
-/*   - Part of HL Who's Online v0.91                                       */
+/*   - Part of HL Who's Online v0.92                                       */
 /***************************************************************************/
 /* $Id$ */
 /*************************************************************************-->
@@ -30,7 +30,8 @@
     <table cellspacing="2">
       <?php require_once("whosonline.php"); ?>
       <caption>
-        <font class="fontNormal"> <? printServerName(); ?> </font>
+        <font class="fontNormal"> <? printServerName(); ?> <br />
+        <? printCurrentMapName(); ?> : <? printConnectedPlayersSummary(); ?></font>
       </caption>
       <tr>
         <td width="120"><font class="fontMid">Player Name</font></td>
