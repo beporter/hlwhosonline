@@ -1,0 +1,3 @@
+show map name
+flag for showing just 13/20 players or list of player names and kills
+

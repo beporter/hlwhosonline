@@ -1,0 +1,97 @@
+/*****************************************************************************/
+/* whosonline.readme                                                         */
+/*   - ReadMe for the Who's Online script                                    */
+/*   - Description and use for the Who's online script package               */
+/*   - Distributed under the GPL terms - see the readme (this doc) for info  */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
+/*****************************************************************************/
+// part of whosonline v0.91
+/*****************************************************************************/
+
+    Who's Online
+    Copyright (C) 2002 Brian Porter     <beporter@users.sourceforge.net>
+    All Rights Reserved
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-------------------------------------------------------------------------------
+
+DESCRIPTION
+-----------
+This script package is designed to allow the display of players currently 
+connected to a Half-Life server on a webpage. There are basically three parts
+to the script. The first is a CounterStrike class, written by Henrik Schack 
+Jensen <henrik@schack.dk>, that gathers and stores information from a 
+Half-Life server. The second half is an .inc file that provides functions that
+can be used to output data in a web page. The third part is an .html and a .php
+file that together form the front end of the package. More on that under the
+section called INSTALLING.
+
+REQUIRES
+--------
+ + A Half-Life server's IP address and port number
+ + Access to a web server with PHP 4+
+ + The ability to follow some instructions
+ + A bit of common sense
+
+INSTALLING
+----------
+1) If you're reading this, you've already decompressed the script package.
+
+2) Create a non web-accessable directory. Start by putting all of the files in 
+   this package in this directory.
+
+3) Now you have a choice: 
+   
+   A) If you would like to use this script as a standalone page on your site, 
+      move whosonline.php and whosonline.html to a web-accessable directory and
+      rename whosonline.html to whatever you want to call the page, plus the 
+      ".php" file extension. Link other pages to this file, NOT the original
+      whosonline.php.
+      
+   B) To use this script inside a pre-existing web page (such as the homepage
+      for your web site), open up whosonline.html and take a look at it. At the
+      very least you need to take from this file the "require_once()" and the 
+      <table>. Using whosonline.html as a reference, edit the web page you want 
+      to add the script to. After you're done, move whosonline.php to a web 
+      accessable directory (preferably the same as the page you added the Who's 
+      Online table to). Make sure the page uses the file extension .php or the 
+      PHP parser will not run through this file when a user requests it.
+      
+   For both of these methods, be sure to set correct permissions for any files 
+   you add to a web directory.
+   
+4) Now you must make sure each file knows where it's other files are. Start
+   with the web page you link other pages to (either the renamed whosonline.html
+   file -or- the web page you added the output table to). Make sure this file 
+   points to whosonline.php. If they are in the same directory, "whosonline.php"
+   is sufficient. Otherwise, use the absolute filesystem path to the file.
+   whosonline.php declares the other files used, so edit it to point to them,
+   again using absolute paths.
+   
+5) Now configure whosonline.php with the rest of the settings required for your
+   server. Further isntructions on this are in whosonline.php itself. 
+   
+6) That's it. Now open the web page and make sure things are coming out right.
+   If they aren't, read this file again. Then check to make sure your file
+   locations are correct. If that's still not it, panic for a while and give
+   up. No, actually, you can email Brian at <beporter@users.sourceforge.net>.
+   
+
+--
+Thanks and good luck!
+Brian and the Who's Online Development Team
+   
+/*#########################################################################*/?>

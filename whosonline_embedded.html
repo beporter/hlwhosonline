@@ -1,0 +1,35 @@
+<!--**************************************************************************/
+/* whosonline_embedded.html                                                  */
+/*   - HTML template file for Who's Online                                   */
+/*   - an be embedded in a full page (see README for use)                    */
+/*   - Distributed under the GPL terms - see the readme for info             */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
+/*****************************************************************************/
+// part of whosonline v0.91
+/***************************************************************************-->
+
+    <table cellspacing="2">
+      <?php require_once("whosonline.php"); ?>
+      <caption>
+        <font class="fontNormal"> <? printServerName(); ?> </font>
+      </caption>
+      <tr>
+        <td width="120"><font class="fontMid">Player Name</font></td>
+        <td width="20"><font class="fontMid">Kills</font></td>
+        <td width="50"><font class="fontMid">Time</font></td>
+      </tr>
+      <?  while( popNextOnlinePlayer() ) {  ?>
+      <tr>
+        <td><? printNextOnlinePlayer_name(); ?></td>
+        <td align="right"><? printNextOnlinePlayer_kills(); ?></td>
+        <td><? printNextOnlinePlayer_time(); ?></td>
+      </tr>
+      <?  } /*** END OF WHILE LOOP ***/  ?>
+    </table>
+    </center>
+
+    <center>
+      <p><font class="fontCredit"><a target="_blank" href="http://hlwhosonline.sourceforge.net">HL Who's Online</a> Copyright 2002 <a href="mailto:beporter@users.sourceforge.net">Brian Porter</a></font></p>
+    </center>
+
+<!--************************************************************************-->
