@@ -1,18 +1,18 @@
-<?php /***********************************************************************/
-/* whosonline.php                                                            */
-/*   - the Who's Online script for displaying players connected to a HL      */
-/*        server on a webpage                                                */
-/*   - uses the CounterStrike class by Henrik Schack Jensen                  */
-/*        <henrik@schack.dk>                                                 */
-/*   - Distributed under the GPL terms - see the readme for info             */
-/*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
-/*****************************************************************************/
-// part of whosonline v0.91
-/*****************************************************************************/
+<?php /*********************************************************************/
+/* whosonline.php                                                          */
+/*   - the Who's Online script for displaying players connected to a HL    */
+/*        server on a webpage                                              */
+/*   - uses the CounterStrike class by Henrik Schack Jensen                */
+/*        <henrik@schack.dk>                                               */
+/*   - Distributed under the GPL terms - see the readme for info           */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/***************************************************************************/
+/* $Id$ */
+/***************************************************************************/
 
-/*****************************************************************************/
-/* Configuration Variables                                                   */
-/*****************************************************************************/
+/***************************************************************************/
+/* Configuration Variables                                                 */
+/***************************************************************************/
 // Global server connection information used by the CounterStrike class
 $prefs["serverAddress"]    = "64.55.197.41";
 $prefs["serverPort"]       = "27015";
@@ -52,9 +52,9 @@ $prefs["playerStyleName"]  = "fontSmall";
 $prefs["errorStyleName"]   = "fontError";
 
 
-/*****************************************************************************/
-/* Main                                                                      */
-/*****************************************************************************/
+/***************************************************************************/
+/* Main                                                                    */
+/***************************************************************************/
 require_once($prefs["classFile"]);
 require_once($prefs["includeFile"]);
 
@@ -75,9 +75,9 @@ $nextPlayer = array();
 // Gather information
 $status = 
    ($csInfo->getServerPlayers($prefs["serverAddress"],$prefs["serverPort"],1000) && 
-    $csInfo->getServerInfo($prefs["serverAddress"],$prefs["serverPort"],1000));
+    $csInfo->getServerInfo($prefs["serverAddress"],$prefs["serverPort"],1000) );
            
 // Done all the prep work, so finish by calling the html template
 include_once($prefs["templateFile"]);
 
-/*#########################################################################*/?>
+/*#######################################################################*/?>

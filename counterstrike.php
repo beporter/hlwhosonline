@@ -1,14 +1,17 @@
 <?php
+
+/* $Id$ */
+
 // ****************************************************************************
 // Class CounterStrike
 // Author : Henrik Schack Jensen (henrik@schack.dk)
 // Modified: Brian Porter <beporter@users.sourceforge.net> (v1.02)
-// 
+//
 // Changelog:
 // Version 1.02 	03/16/2002	Internalized connection vars and added a method
 //								  to set them: setConnectionVars()
-//								Supressed PHP version warning about
-//								  socket_set_timeout()
+//								Supressed PHP version warning about socket_set_timeout()
+//                Added RCS ID tag
 // Version 1.01 	03/11/2001	Removed ASP style tags
 //								Removed usort warning
 //								Fixed error on empty server

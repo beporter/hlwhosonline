@@ -1,17 +1,17 @@
-<?php /***********************************************************************/
-/* whosonline.inc                                                            */
-/*   - function definitions for the Who's Online script                      */
-/*   - uses the CounterStrike class by Henrik Schack Jensen                  */
-/*        <henrik@schack.dk>                                                 */
-/*   - Distributed under the GPL terms - see the readme for info             */
-/*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
-/*****************************************************************************/
-// part of whosonline v0.91
-/*****************************************************************************/
+<?php /*********************************************************************/
+/* whosonline.inc                                                          */
+/*   - Function definitions for the Who's Online script                    */
+/*   - uses the CounterStrike class by Henrik Schack Jensen                */
+/*        <henrik@schack.dk>                                               */
+/*   - Distributed under the GPL terms - see the readme for info           */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/***************************************************************************/
+/* $Id$ */
+/***************************************************************************/
 
-/*****************************************************************************/
-/* Summary                                                                   */
-/*****************************************************************************/
+/***************************************************************************/
+/* Summary                                                                 */
+/***************************************************************************/
 /*
 
 These functions are designed to be embedded in an html template page. Each one
@@ -40,11 +40,11 @@ printNextOnlinePlayer_time()
 */
 
 
-/*****************************************************************************/
-/* Sub-routines                                                              */
-/*****************************************************************************/
+/***************************************************************************/
+/* Sub-routines                                                            */
+/***************************************************************************/
 
-/*---------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 function popNextOnlinePlayer()
 // Gets the next player from the player list and returns true. If no players
 //   are left, returns false.
@@ -82,7 +82,7 @@ function popNextOnlinePlayer()
     return(false);
 }
 
-/*---------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 function printServerName()
 // Prints the name of the server if available.
 {
@@ -96,7 +96,7 @@ function printServerName()
           . ">Name not available</font>");
 }
 
-/*---------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 function printNextOnlinePlayer_name()
 // Prints 'name' in the player array stored in $nextPlayer as a hyperlink 
 //   to the hlstats search page for the player... or if hlstats is
@@ -121,7 +121,7 @@ function printNextOnlinePlayer_name()
           . $nextPlayer["name"] . "</font>");
 }
 
-/*---------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 function printNextOnlinePlayer_kills()
 // Prints 'kills' in the player array stored in $nextPlayer.
 {
@@ -131,7 +131,7 @@ function printNextOnlinePlayer_kills()
          . $nextPlayer["frags"] . "</font>");
 }
 
-/*---------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 function printNextOnlinePlayer_time()
 // Prints 'time connected' in the player array stored in $nextPlayer.
 {
@@ -141,4 +141,4 @@ function printNextOnlinePlayer_time()
          . $nextPlayer["time"] . "</font>");
 }
 
-/*#########################################################################*/?>
+/*######################################################################*/ ?>

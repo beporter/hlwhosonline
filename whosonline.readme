@@ -5,10 +5,10 @@
 /*   - Distributed under the GPL terms - see the readme (this doc) for info  */
 /*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
 /*****************************************************************************/
-// part of whosonline v0.91
+/* $Id$ */
 /*****************************************************************************/
 
-    Who's Online
+    HL Who's Online
     Copyright (C) 2002 Brian Porter     <beporter@users.sourceforge.net>
     All Rights Reserved
 
