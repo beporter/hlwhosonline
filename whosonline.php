@@ -14,17 +14,17 @@
 /* Configuration Variables                                                 */
 /***************************************************************************/
 // Global server connection information used by the CounterStrike class
-$prefs["serverAddress"]    = "64.55.197.41";
+$prefs["serverAddress"]    = "127.0.0.1";
 $prefs["serverPort"]       = "27015";
 $prefs["refreshTime"]      = "60";
 
-// Location of hlstats on your web server (leave empty if you're not using
-//   hlstats.)
+// Location of hlstats on your web server, i.e.: "/hlstats/hlstats.php"
+//   (leave empty if you're not using hlstats.)
 $prefs["hlstatsLocation"]  = "";
 
 // File locations
 $prefs["includeFile"]      = "whosonline.inc";
-$prefs["templateFile"]     = "whosonline_embedded.html";
+$prefs["templateFile"]     = "whosonline.html";
 $prefs["classFile"]        = "counterstrike.php";
 
 // The script uses four CSS class styles to format text. First is the style 

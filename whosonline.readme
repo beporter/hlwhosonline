@@ -50,41 +50,34 @@ INSTALLING
 ----------
 1) If you're reading this, you've already decompressed the script package.
 
-2) Create a non web-accessable directory. Start by putting all of the files in 
-   this package in this directory.
+2) Move counterstrike.php, whosonline.php, whosonline.inc,
+   template.html and template_embedded.html to a web accessible directory.
 
 3) Now you have a choice: 
    
    A) If you would like to use this script as a standalone page on your site, 
-      move whosonline.php and whosonline.html to a web-accessable directory and
-      rename whosonline.html to whatever you want to call the page, plus the 
-      ".php" file extension. Link other pages to this file, NOT the original
-      whosonline.php.
+      edit the configuration variables in whosonline.php to point to 
+      template.html and your HL server's IP address. (If you want, you can
+      modify template.html to suit your visual tastes.)
       
    B) To use this script inside a pre-existing web page (such as the homepage
-      for your web site), open up whosonline.html and take a look at it. At the
-      very least you need to take from this file the "require_once()" and the 
-      <table>. Using whosonline.html as a reference, edit the web page you want 
-      to add the script to. After you're done, move whosonline.php to a web 
-      accessable directory (preferably the same as the page you added the Who's 
-      Online table to). Make sure the page uses the file extension .php or the 
-      PHP parser will not run through this file when a user requests it.
-      
-   For both of these methods, be sure to set correct permissions for any files 
+      for your web site "index.html"), change the extension to .php and add
+      the following in the exact place in the file you want the script to
+      appear.
+
+      <? include_once("whosonline.php); ?>
+
+      NOTE: whosonline.php and the rest of the files from this package should
+      be in the same directory as "index.php".
+
+   For both of these methods, be sure to set correct permissions for any files
    you add to a web directory.
-   
-4) Now you must make sure each file knows where it's other files are. Start
-   with the web page you link other pages to (either the renamed whosonline.html
-   file -or- the web page you added the output table to). Make sure this file 
-   points to whosonline.php. If they are in the same directory, "whosonline.php"
-   is sufficient. Otherwise, use the absolute filesystem path to the file.
-   whosonline.php declares the other files used, so edit it to point to them,
-   again using absolute paths.
-   
-5) Now configure whosonline.php with the rest of the settings required for your
-   server. Further isntructions on this are in whosonline.php itself. 
-   
-6) That's it. Now open the web page and make sure things are coming out right.
+
+4) Modify the configuration variables in whosonline.php. It is likely the
+   only thing you will have to change is the IP for your game server, and 
+   pointing to the appropriate template file based on your situation.
+
+5) That's it. Now open the web page and make sure things are coming out right.
    If they aren't, read this file again. Then check to make sure your file
    locations are correct. If that's still not it, panic for a while and give
    up. No, actually, you can email Brian at <beporter@users.sourceforge.net>.
@@ -93,5 +86,5 @@ INSTALLING
 --
 Thanks and good luck!
 Brian and the Who's Online Development Team
-   
+
 /*#########################################################################*/?>
