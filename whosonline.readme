@@ -1,12 +1,13 @@
-/*****************************************************************************/
-/* whosonline.readme                                                         */
-/*   - ReadMe for the Who's Online script                                    */
-/*   - Description and use for the Who's online script package               */
-/*   - Distributed under the GPL terms - see the readme (this doc) for info  */
-/*   - Copyright Brian Porter <beporter@users.sourceforge.net>               */
-/*****************************************************************************/
+/***************************************************************************/
+/* whosonline.readme                                                       */
+/*   - ReadMe for the Who's Online script                                  */
+/*   - Description and use for the Who's online script package             */
+/*   - Distributed under the GPL terms - see the readme (this doc) for info*/
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/*   - Part of HL Who's Online v0.91                                       */
+/***************************************************************************/
 /* $Id$ */
-/*****************************************************************************/
+/***************************************************************************/
 
     HL Who's Online
     Copyright (C) 2002 Brian Porter     <beporter@users.sourceforge.net>
@@ -26,7 +27,7 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
--------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 DESCRIPTION
 -----------
@@ -87,4 +88,4 @@ INSTALLING
 Thanks and good luck!
 Brian and the Who's Online Development Team
 
-/*#########################################################################*/?>
+/*#######################################################################*/?>

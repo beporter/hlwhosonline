@@ -5,6 +5,7 @@
 /*        <henrik@schack.dk>                                               */
 /*   - Distributed under the GPL terms - see the readme for info           */
 /*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/*   - Part of HL Who's Online v0.91                                       */
 /***************************************************************************/
 /* $Id$ */
 /***************************************************************************/
