@@ -1,0 +1,22 @@
+<!--************************************************************************/
+/* whosonline-tiny.html                                                    */
+/***************************************************************************/
+/* $Id$ */
+/*************************************************************************-->
+<div align="center">
+<table cellspacing="2" class="">
+  <caption class=""><?=$csInfo->returnServerName(); ?></caption>
+  <tr>
+  	<th align="left">Player Name</td>
+  	<th align="center">Frags</td> 
+  	<th align="right">Time</td> 
+  </tr>
+  <?  while( $csInfo->popNextPlayer() ) {  ?>
+  <tr>
+    <td align="left"><?=$csInfo->returnNextPlayer_name(); ?></td>
+    <td align="center"><?=$csInfo->returnNextPlayer_kills(); ?></td>
+    <td align="right"><?=$csInfo->returnNextPlayer_time(); ?></td>
+  </tr>
+  <?  } /*** END OF WHILE LOOP ***/  ?>
+</table>
+</div>

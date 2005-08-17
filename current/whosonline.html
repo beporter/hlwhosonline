@@ -1,0 +1,89 @@
+<!--************************************************************************/
+/* whosonline.html                                                         */
+/*   - HTML template file for Who's Online                                 */
+/*   - Distributed under the GPL terms - see the readme for info           */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/*   - Part of HL Who's Online v1.0                                        */
+/***************************************************************************/
+/* $Id$ */
+/*************************************************************************-->
+<div align="center">
+
+<table cellspacing="2" class="hlwoNormal">
+	<?php require_once("whosonline.php"); ?>
+	
+	<caption class="hlwoNormal"><?=$csInfo->returnServerName();?></caption>
+	
+	<tr>
+		<td class="hlwoMid" align="right">Server address:</td>
+		<td colspan="2">
+			<?=$prefs['serverAddress']?>:<?=$prefs['serverPort']?>&nbsp;
+			<a title="This link will launch CS and connect to this server" 
+			href="steam: -applaunch 10 +connect <?=$prefs['serverAddress']?>:<?=$prefs['serverPort']?>">Click to join</a>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="hlwoMid" align="right">Map:</td>
+		<td colspan="2">
+			<? 
+			echo $csInfo->returnCurrentMap(); 
+			$nm = $csInfo->returnNextMap(); 
+			if($nm) echo("&nbsp;({$nm}&nbsp;next)");
+			?>
+		</td>
+	</tr>
+	
+	<? $tl = $csInfo->returnTimeLeft(); if($tl) { ?>
+	<tr>
+		<td class="hlwoMid" align="right">Time left:</td>
+		<td colspan="2"><?=$tl?></td>
+	</tr>
+	<? } /*** END OF IF() STATEMENT ***/ ?>
+	
+	<tr>
+		<td class="hlwoMid" align="right">Rules:</td>
+		<td colspan="2">
+			<form><select><option>Open to see rules</option>
+			<?
+			foreach($csInfo->rules as $rule => $val) 
+			if((trim($rule) != "") && (strstr($rule,"_tutor") === false) )
+			print("\n<option>$rule = $val</option>");
+			?>
+			</select></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="hlwoMid" align="left">Player Name</td>
+		<td class="hlwoMid" align="center">Frags</td>
+		<td class="hlwoMid" align="right">Time</td>
+	</tr>
+	
+	<tr>
+		<td colspan="3"><hr /></td>
+	</tr>
+	
+	<?  while( $csInfo->popNextPlayer() ) {  ?>
+	<tr>
+		<td class="hlwoSmall" align="left"><?=$csInfo->returnNextPlayer_name(); ?></td>
+		<td class="hlwoSmall" align="center"><?=$csInfo->returnNextPlayer_kills(); ?></td>
+		<td class="hlwoSmall" align="right"><?=$csInfo->returnNextPlayer_time(); ?></td>
+	</tr>	
+	<?  } /*** END OF WHILE LOOP ***/  ?>
+</table>
+
+<!-- IF YOU HAVE MAP IMAGES ON YOUR WEBSERVER, UNCOMMENT THE FOLLOWING LINE AND 
+CHANGE THE IMAGE SRC PATH TO POINT TO THE CORECT FOLDER. (HINT: You can get a 
+great images pack from the HLmaps collection: http://hlmaps.sourceforge.net) -->
+
+<!--
+<p><img alt="" src="/path/to/mapimgs/<?=$csInfo->returnCurrentMap(); ?>.jpg"></p>
+-->
+
+<p class="fontWhosonline"><a href="http://hlwhosonline.sourceforge.net/">HL Who's Online</a> 
+copyright &copy; 2005 <a href="mailto:beporter@users.sourceforge.net">Brian Porter</a>.</p>
+
+</div>
+
+<!--**********************************************************************-->

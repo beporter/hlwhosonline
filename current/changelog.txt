@@ -1,0 +1,34 @@
+/***************************************************************************/
+/* changelog.txt                                                           */
+/*   - ChangeLog for the Who's Online script package                       */
+/*   - Description of changes for the Who's online script package          */
+/*   - Distributed under the GPL terms - see the readme for info           */
+/*   - Copyright Brian Porter <beporter@users.sourceforge.net>             */
+/*   - Part of HL Who's Online v1.0                                        */
+/***************************************************************************/
+/* $Id$ */
+/***************************************************************************/
+
+---------------------------------------------
+- bugfix, + enhancement, * contrib, = RELEASE
+---------------------------------------------
+
+= 1.0 2005-08-16
+  - New query class for updated steam query protocol.
+  * New serverspy class provided by Daniel Luft <erozion@t-online.de>
+  + Switched to fully object-oriented design.
+  + Added a couple extra accessors.
+  + Added new templates.
+  + Added ?ip=x.x.x.x ability to URL. Will query any game server specified.
+  + Added $hlwoIncFile to allow the script to be called multiple times on the 
+    same page.
+  + Added support for AMX nextmap and timeleft features.
+
+= 0.92 2002-11-1
+  + Player Summary routine.
+  + Current Map routine.
+  + Added this ChangeLog.
+
+= 0.91 2002-11-1
+  = Initial release.
+
