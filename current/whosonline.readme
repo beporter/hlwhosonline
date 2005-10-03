@@ -82,21 +82,26 @@ INSTALLING
    following in the EXACT place in the file you want the Who's Online data 
    to appear:
 
-      <? include_once("whosonline.php); ?>
+      <? include("whosonline.php); ?>
 
       NOTE: In this example, whosonline.php and the rest of the files 
       from this package should be in the same directory as "index.php".
+   
+   There is another new feature you should be aware of. You can override
+   the IP and port that hlwhosonline uses by creating an $override[] array
+   before including whosonline.php. See the file "multi.php" for an example
+   of how to accomplish this.
 
 5) That's it. Now open the web page and make sure things are coming out right.
    If they aren't, read this file again. Then check to make sure your file
    locations are correct. If you can't pinpoint the problem, and aren't 
    seeing any errors in the webpage, try turning on the debugging output
    at the top of whosonline.php. If that's still doesn't help, panic for a 
-   while and give up. No, actually, you can email Brian at 
-   <beporter@users.sourceforge.net> or (preferably) post in the HLWO support 
-   boards on SourceForge.
-   <http://sourceforge.net/tracker/?group_id=64817&atid=508755>
-   
+   while and give up. No, actually you should first try post in the HLWO 
+   support boards on SourceForge:
+   <http://sourceforge.net/forum/forum.php?forum_id=219278>
+   As a last resort, you can always email Brian directly:
+   <beporter@users.sourceforge.net>
 
 --
 Thanks and good luck!

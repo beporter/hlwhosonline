@@ -13,6 +13,12 @@
 - bugfix, + enhancement, * contrib, = RELEASE
 ---------------------------------------------
 
+= 1.01 2005-10-02
+  + Added $override[] support for specifying server's IP and port, as well
+    as the display template to use outside of the actual whosonline script.
+  + Added an example script "multi.php" to demonstrate how to include
+    multiple server statistics on one page using $override[]s.
+
 = 1.0 2005-08-16
   - New query class for updated steam query protocol.
   * New serverspy class provided by Daniel Luft <erozion@t-online.de>
