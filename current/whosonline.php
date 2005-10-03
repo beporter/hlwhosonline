@@ -88,10 +88,19 @@ require_once($prefs["classFile"]);
 // each time. Simply set $hlwoIncFile to the relative path of your template
 // file and include("whosonline.php"). (This works best with output buffering.)
 if(isset($hlwoIncFile)) $prefs["templateFile"] = $hlwoIncFile;
+elseif(isset($override['template'])) $prefs["templateFile"] = $override['template'];
+
+// We want to be able to call this script from other PHP pages and show
+// results for different servers each time. That means we need a way to
+// specifiy the IP and port outside of the script. Use the $override[]
+// array.
+if(isset($override['ip'])) $prefs["serverAddress"] = $override['ip'];
+if(isset($override['port'])) $prefs["serverPort"] = $override['port'];
 
 // Handy back door to display ANY server by modifying the URL used to call
 //   whosonline.php. IE: http://my.domain.com/whosonline.php?ip=64.55.197.41
 if(isset($_REQUEST['ip'])) $prefs["serverAddress"] = $_REQUEST['ip'];
+if(isset($_REQUEST['port'])) $prefs["serverPort"] = $_REQUEST['port'];
 
 // Create an object to hold server info
 $csInfo = new whosonline($prefs["serverAddress"].":".$prefs["serverPort"]);
@@ -106,7 +115,7 @@ $csInfo->setStats($prefs["statsLocation"]);
 $csInfo->fetchAll();
 
 // Done all the prep work, so finish by calling the html template
-include_once($prefs["templateFile"]);
+include($prefs["templateFile"]);
 
 // Disconnect
 $csInfo->disconnect();
